@@ -1,0 +1,103 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@layer base {
+  body {
+    min-height: 100dvh;
+    font-family: var(--font-display);
+    color: var(--color-blue-900);
+    background-image: url(assets/images/pattern-background-mobile-light.svg);
+    background-color: var(--color-grey50);
+    background-repeat: no-repeat;
+    background-position: right 1rem bottom 1rem;
+    background-size: cover;
+  }
+  #root {
+    min-height: 100dvh;
+  }
+  h1 {
+    font-size: clamp(2.5rem, 1.429rem + 5.357vw, 4rem);
+  }
+
+  h1 span {
+    font-weight: 500;
+  }
+
+  h2 {
+    font-family: var(--font-display-Italic);
+    color: var(--color-grey500);
+    line-height: 150%;
+    font-size: clamp(0.875rem, 0.607rem + 1.339vw, 1.25rem);
+  }
+  img {
+    height: clamp(2.5rem, 1.786rem + 3.571vw, 3.5rem);
+    width: clamp(2.5rem, 1.786rem + 3.571vw, 3.5rem);
+  }
+}
+
+@theme {
+  --color-grey500: hsl(219, 13%, 44%);
+  --color-grey50: hsl(220, 38%, 97%);
+
+  --color-blue950: hsl(214, 24%, 23%);
+  --color-blue900: hsl(216, 25%, 25%);
+  --color-blue850: hsl(215, 27%, 32%);
+  --color-blue500: hsl(223, 100%, 59%);
+  --color-blue300: hsl(216, 47%, 78%);
+  --color-blue100: hsl(220, 50%, 95%);
+  --color-blue50: hsl(225, 100%, 96%);
+
+  --color-green500: hsl(151, 68%, 52%);
+  --color-green100: hsl(151, 88%, 94%);
+
+  --color-purple600: hsl(227, 91%, 56%);
+  --color-purple100: hsl(278, 100%, 95%);
+
+  --color-orange400: hsl(22, 100%, 60%);
+  --color-orange50: hsl(27, 100%, 96%);
+
+  --color-red500: hsl(0, 82%, 63%);
+
+  --font-display: 'Rubik';
+  --font-display-Italic: 'Rubik-Italic';
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/src/assets/fonts/Rubik-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Rubik-Italic';
+  src: url('/src/assets/fonts/Rubik-Italic-VariableFont_wght.ttf')
+    format('truetype');
+}
+
+@layer components {
+  .option {
+    background-color: white;
+    padding: clamp(1rem, 0.643rem + 1.786vw, 1.5rem);
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: clamp(1.125rem, 0.679rem + 2.232vw, 1.75rem);
+  }
+  .subject {
+    font-size: clamp(1.125rem, 0.679rem + 2.232vw, 1.75rem);
+  }
+  /* question change line height from 120% to 150% mobile to tablet */
+  .question {
+    font-size: clamp(1.25rem, 0.536rem + 3.571vw, 2.25rem);
+  }
+  .submit {
+    font-size: clamp(1.125rem, 0.679rem + 2.232vw, 1.75rem);
+    border-radius: 12px;
+    color: white;
+    background-color: var(--color-purple-600);
+  }
+}
+
+@utility text-preset1 {
+  font-weight: bold;
+  line-height: 0.7619047619;
+  letter-spacing: 0;
+}
