@@ -5,6 +5,7 @@ import Score from './pages/Score'
 import { Switch } from './components/ui/switch'
 import sun_icon_dark from './assets/images/icon-sun-dark.svg'
 import moon_icon_dark from './assets/images/icon-moon-dark.svg'
+
 function App() {
   return (
     <BrowserRouter>
@@ -19,7 +20,7 @@ function App() {
       </div>
       <Routes>
         <Route path="/frontend-quiz-app/" element={<Home />} />
-        <Route path="/frontend-quiz-app/quiz/*" element={<Quiz />} />
+        <Route path="/frontend-quiz-app/quiz/:id" element={<Quiz />} />
         <Route path="/frontend-quiz-app/score" element={<Score />} />
       </Routes>
     </BrowserRouter>

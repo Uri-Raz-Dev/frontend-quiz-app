@@ -101,6 +101,7 @@
   /* question change line height from 120% to 150% mobile to tablet */
   .question {
     font-size: clamp(1.25rem, 0.536rem + 3.571vw, 2.25rem);
+    font-weight: 500;
   }
   .submit {
     font-size: clamp(1.125rem, 0.679rem + 2.232vw, 1.75rem);
@@ -108,6 +109,12 @@
     color: white;
     background-color: var(--color-purple-600);
     line-height: 100%;
+    font-weight: 500;
+  }
+
+  .question-order {
+    height: clamp(2.5rem, 1.786rem + 3.571vw, 3.5rem);
+    width: clamp(2.5rem, 1.786rem + 3.571vw, 3.5rem);
   }
 }
 
