@@ -97,6 +97,7 @@
   .subject {
     font-size: clamp(1.125rem, 0.679rem + 2.232vw, 1.75rem);
     line-height: 100%;
+    font-weight: 500;
   }
   /* question change line height from 120% to 150% mobile to tablet */
   .question {
@@ -115,6 +116,17 @@
   .question-order {
     height: clamp(2.5rem, 1.786rem + 3.571vw, 3.5rem);
     width: clamp(2.5rem, 1.786rem + 3.571vw, 3.5rem);
+  }
+  .score {
+    font-size: clamp(5.5rem, 3rem + 12.5vw, 9rem);
+    font-weight: 500;
+    line-height: 100%;
+  }
+  .total {
+    font-size: clamp(1.125rem, 0.857rem + 1.339vw, 1.5rem);
+    line-height: 100%;
+    font-weight: 500;
+    color: var(--color-grey500);
   }
 }
 
