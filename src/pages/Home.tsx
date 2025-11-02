@@ -1,7 +1,7 @@
 import Header from '@/components/Header'
 import SubjectList from '@/components/SubjectList'
 
-const Home = () => {
+const Home = ({ page }: { page: number }) => {
   return (
     <>
       <Header />
@@ -12,7 +12,7 @@ const Home = () => {
           </h1>
           <h2>Pick a subject to get started</h2>
         </section>
-        <SubjectList />
+        <SubjectList page={page} />
       </main>
     </>
   )

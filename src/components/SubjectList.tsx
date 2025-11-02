@@ -5,7 +5,7 @@ import css_icon from '../assets/images/icon-css.svg'
 import js_icon from '../assets/images/icon-js.svg'
 import accessibility_icon from '../assets/images/icon-accessibility.svg'
 
-const SubjectList = () => {
+const SubjectList = ({ page }: { page: number }) => {
   const createList = () => {
     const quizList = data.quizzes
     const iconArray = [html_icon, css_icon, js_icon, accessibility_icon]
@@ -23,7 +23,9 @@ const SubjectList = () => {
           >
             <img src={iconArray[idx]} />
           </div>
-          <Link to={`/frontend-quiz-app/quiz/${val.title}`}>{val.title}</Link>
+          <Link to={`/frontend-quiz-app/quiz/${val.title}/${page}`}>
+            {val.title}
+          </Link>
         </li>
       )
     })

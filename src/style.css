@@ -128,6 +128,21 @@
     font-weight: 500;
     color: var(--color-grey500);
   }
+
+  .error {
+    font-size: clamp(1.125rem, 0.857rem + 1.339vw, 1.5rem);
+    font-weight: 500;
+  }
+
+  .error-icon {
+    height: clamp(2rem, 1.643rem + 1.786vw, 2.5rem);
+    width: clamp(2rem, 1.643rem + 1.786vw, 2.5rem);
+  }
+
+  .answer-icon {
+    height: clamp(2rem, 1.643rem + 1.786vw, 2.5rem);
+    width: clamp(2rem, 1.643rem + 1.786vw, 2.5rem);
+  }
 }
 
 @utility text-preset1 {

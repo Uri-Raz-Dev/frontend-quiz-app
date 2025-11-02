@@ -50,7 +50,13 @@ const Logo = () => {
       >
         <img src={handleSource()} alt={`${id} icon`} />
       </div>
-      <Link className="subject" to="/frontend-quiz-app/">
+      <Link
+        onClick={() => {
+          window.location.href = '/frontend-quiz-app/'
+        }}
+        className="subject"
+        to="/frontend-quiz-app/"
+      >
         {id}
       </Link>
     </div>
