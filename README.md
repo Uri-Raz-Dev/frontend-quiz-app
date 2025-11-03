@@ -1,7 +1,7 @@
 ### Links
 
-- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/password-generator-NkpnSCQwEs)
-- Live Site URL: [Git repository](https://uri-raz-dev.github.io/password-generator-app/)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/frontend-quiz-app-react-tailwind-css-shadcn-dark-mode-55KZnVW2TI)
+- Live Site URL: [Git repository](https://uri-raz-dev.github.io/frontend-quiz-app/)
 
 ### Built with
 
