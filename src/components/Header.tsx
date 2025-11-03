@@ -6,12 +6,13 @@ import moon_icon_dark from '../assets/images/icon-moon-dark.svg'
 const Header = () => {
   const { id } = useParams()
   return (
-    <header className="flex justify-between px-6 py-4">
+    <header className="lg: mt-13.5 flex justify-between px-6 py-4 md:px-0 md:py-0 lg:mt-0 lg:mb-25">
+      {/* md:mt-13.5 md:max-w-[46rem] */}
       {id ? <Logo /> : <div></div>}
       <div className="flex items-center gap-2">
-        <img className="size-4" src={sun_icon_dark} />
+        <img className="size-4 md:size-6" src={sun_icon_dark} />
         <Switch />
-        <img className="size-4" src={moon_icon_dark} />
+        <img className="size-4 md:size-6" src={moon_icon_dark} />
       </div>
     </header>
   )

@@ -44,7 +44,7 @@ const Logo = () => {
     return color
   }
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-4 md:gap-6">
       <div
         className={`image-container flex items-center justify-center rounded-[6px] ${handleBgColor()}`}
       >

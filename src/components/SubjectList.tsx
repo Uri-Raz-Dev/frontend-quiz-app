@@ -17,9 +17,12 @@ const SubjectList = ({ page }: { page: number }) => {
     ]
     const quizArray = quizList.map((val, idx) => {
       return (
-        <li className="option flex items-center gap-4 p-4" key={val.title}>
+        <li
+          className="option flex items-center gap-4 p-4 md:max-w-160 md:rounded-3xl lg:max-w-141 lg:p-6"
+          key={val.title}
+        >
           <div
-            className={`image-container flex items-center justify-center ${iconColorArray[idx]}`}
+            className={`image-container flex items-center justify-center rounded-xl ${iconColorArray[idx]}`}
           >
             <img src={iconArray[idx]} />
           </div>
@@ -32,7 +35,11 @@ const SubjectList = ({ page }: { page: number }) => {
     return quizArray
   }
 
-  return <ul className="flex flex-col gap-4">{createList()}</ul>
+  return (
+    <ul className="flex w-full flex-col gap-4 md:items-center md:gap-6 lg:gap-4">
+      {createList()}
+    </ul>
+  )
 }
 
 export default SubjectList
