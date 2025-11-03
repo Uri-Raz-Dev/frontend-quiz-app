@@ -10,26 +10,25 @@
 - [Tailwind](https://tailwindcss.com/) - A utility-first CSS framework
 - Semantic HTML5 markup
 - Flexbox
-- Grid
 - Mobile-first workflow
 - TypeScript
+- [shadcn](https://ui.shadcn.com/)- Excellent React UI
 
 ### What I learned
 
-- Managing states in React
-- Component workflow
+- Use cases of UseEffect
+- Apply dark mode correctly
+- Dynamic size with clamp
+- Usage of routes and navigate
 - Using tailwind utility classes
 - Learn TypeScript basics
-- How to use Shadcn components correctly
 
 ### Continued development
 
-I want to learn how to make the page more responsive
-
+- How to use local storage
+- How to build full stack app
+- Use global states to ease react workflow
 - Understand useEffect and useRef better
-- Learn about routes in React
-- Dive into the backend side of webpage
-- Learn about all Chrome dev tools options
 - How to organize the workspace
 
 ### Useful resources

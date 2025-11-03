@@ -105,7 +105,6 @@
     line-height: 100%;
     font-weight: 500;
   }
-  /* question change line height from 120% to 150% mobile to tablet */
   .question {
     font-size: clamp(1.25rem, 0.536rem + 3.571vw, 2.25rem);
     font-weight: 500;
