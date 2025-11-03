@@ -11,7 +11,7 @@ const Header = () => {
   const { isDark } = useQuiz()
 
   return (
-    <header className="lg: mt-13.5 flex justify-between px-6 py-4 md:px-0 md:py-0 lg:mt-0 lg:mb-25">
+    <header className="flex justify-between px-6 py-4 md:mt-13.5 md:px-0 md:py-0 lg:my-24.25 lg:mb-25">
       {id ? <Logo /> : <div></div>}
       <div className="flex items-center gap-2">
         <img
