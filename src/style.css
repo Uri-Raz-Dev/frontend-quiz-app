@@ -7,7 +7,7 @@
     min-height: 100dvh;
     width: 100%;
     font-family: var(--font-display);
-    color: var(--color-blue-950);
+    color: var(--color-blue900);
     background-image: url(assets/images/pattern-background-mobile-light.svg);
     background-color: var(--color-grey50);
     background-repeat: no-repeat;
@@ -73,6 +73,8 @@
   --color-orange50: hsl(27, 100%, 96%);
 
   --color-red500: hsl(0, 82%, 63%);
+
+  --purple-tint: color-mix(in srgb, var(--color-purple600) 50%, white);
 
   --font-display: 'Rubik';
   --font-display-Italic: 'Rubik-Italic';
@@ -155,19 +157,40 @@
   letter-spacing: 0;
 }
 
-@media screen and (width>=48rem) {
+@media screen and (min-width: 48rem) {
   body {
     justify-content: center;
     background-image: url(assets/images/pattern-background-tablet-light.svg);
+    background-position: right 12rem bottom 10rem;
   }
 }
 
-@media screen and (width>=64rem) {
+@media screen and (min-width: 64rem) {
   body {
     background-image: url(assets/images/pattern-background-desktop-light.svg);
+    background-position: right -1rem bottom 0rem;
   }
 
   #root {
     place-content: center;
+  }
+}
+
+body.dark {
+  background-image: url(assets/images/pattern-background-mobile-dark.svg);
+  background-color: var(--color-blue900);
+  color: white;
+}
+
+@media screen and (min-width: 48rem) {
+  body.dark {
+    background-image: url(assets/images/pattern-background-tablet-dark.svg);
+    background-position: right 12rem bottom 10rem;
+  }
+}
+@media screen and (min-width: 64rem) {
+  body.dark {
+    background-image: url(assets/images/pattern-background-desktop-dark.svg);
+    background-position: right -1rem bottom 0rem;
   }
 }

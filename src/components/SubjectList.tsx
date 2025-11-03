@@ -4,8 +4,11 @@ import html_icon from '../assets/images/icon-html.svg'
 import css_icon from '../assets/images/icon-css.svg'
 import js_icon from '../assets/images/icon-js.svg'
 import accessibility_icon from '../assets/images/icon-accessibility.svg'
+import { useQuiz } from './store'
 
 const SubjectList = ({ page }: { page: number }) => {
+  const { isDark } = useQuiz()
+
   const createList = () => {
     const quizList = data.quizzes
     const iconArray = [html_icon, css_icon, js_icon, accessibility_icon]
@@ -17,8 +20,9 @@ const SubjectList = ({ page }: { page: number }) => {
     ]
     const quizArray = quizList.map((val, idx) => {
       return (
-        <li
-          className="option flex items-center gap-4 p-4 md:max-w-160 md:rounded-3xl lg:max-w-141 lg:p-6"
+        <Link
+          to={`/frontend-quiz-app/quiz/${val.title}/${page}`}
+          className={`option flex items-center gap-4 p-4 md:max-w-160 md:rounded-3xl lg:max-w-141 lg:p-6 ${isDark && 'bg-(--color-blue850)'} `}
           key={val.title}
         >
           <div
@@ -26,10 +30,8 @@ const SubjectList = ({ page }: { page: number }) => {
           >
             <img src={iconArray[idx]} />
           </div>
-          <Link to={`/frontend-quiz-app/quiz/${val.title}/${page}`}>
-            {val.title}
-          </Link>
-        </li>
+          <div>{val.title}</div>
+        </Link>
       )
     })
     return quizArray

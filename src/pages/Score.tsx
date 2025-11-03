@@ -1,8 +1,11 @@
 import Header from '@/components/Header'
 import Logo from '@/components/Logo'
+import { useQuiz } from '@/components/store'
 import { Link } from 'react-router-dom'
 
 const Score = ({ score }: { score: number }) => {
+  const { isDark } = useQuiz()
+
   return (
     <>
       <Header />
@@ -11,10 +14,16 @@ const Score = ({ score }: { score: number }) => {
           Quiz completed<span> You scored...</span>
         </h1>
         <section className="flex flex-col items-center gap-4 md:gap-8 lg:w-lg">
-          <div className="flex w-full flex-col items-center rounded-[12px] bg-white p-8 md:rounded-3xl md:p-12">
+          <div
+            className={`flex w-full flex-col items-center rounded-[12px] p-8 md:rounded-3xl md:p-12 ${isDark ? 'bg-(--color-blue850)' : 'bg-white'}`}
+          >
             <Logo />
             <span className="score mt-4 md:mt-10">{score}</span>
-            <span className="total mt-4">Out of 10</span>
+            <span
+              className={`total mt-4 ${isDark && 'text-(--color-blue300)'}`}
+            >
+              Out of 10
+            </span>
           </div>
 
           <Link

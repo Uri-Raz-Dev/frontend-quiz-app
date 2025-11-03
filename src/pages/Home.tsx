@@ -1,7 +1,10 @@
 import Header from '@/components/Header'
+import { useQuiz } from '@/components/store'
 import SubjectList from '@/components/SubjectList'
 
 const Home = ({ page }: { page: number }) => {
+  const { isDark } = useQuiz()
+
   return (
     <>
       <Header />
@@ -10,7 +13,9 @@ const Home = ({ page }: { page: number }) => {
           <h1 className="text-pretty">
             Welcome to the <span>Frontend Quiz!</span>
           </h1>
-          <h2>Pick a subject to get started</h2>
+          <h2 className={isDark ? 'text-(--color-blue300)' : ''}>
+            Pick a subject to get started
+          </h2>
         </section>
         <SubjectList page={page} />
       </main>

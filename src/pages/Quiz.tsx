@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import error from '../assets/images/icon-error.svg'
 import incorrect from '../assets/images/icon-incorrect.svg'
 import correct from '../assets/images/icon-correct.svg'
+import { useQuiz } from '@/components/store'
 
 type Checked = null | true | false
 
@@ -27,6 +28,7 @@ const Quiz = ({
   const [selectedOption, setSelectedOption] = useState<string | null>(null)
   const [progress, setProgress] = useState(10)
   const navigate = useNavigate()
+  const { isDark } = useQuiz()
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -74,7 +76,9 @@ const Quiz = ({
         <Header />
         <main className="flex flex-col gap-10 px-6 pt-8 text-pretty md:mt-8.25 md:w-160 md:px-0 md:pt-0 lg:mb-20 lg:w-full lg:flex-row lg:gap-32">
           <section className="lg:max-w-116.25">
-            <h2 className="mb-4 md:leading-[150%] lg:mb-6">
+            <h2
+              className={`mb-4 md:leading-[150%] lg:mb-6 ${isDark && 'text-(--color-blue300)'}`}
+            >
               Question {page + 1} of 10
             </h2>
             <p className="question mb-6 leading-[120%] text-wrap md:mb-10 lg:mb-46">
@@ -104,7 +108,7 @@ const Quiz = ({
                         setIsCorrect(false)
                       }
                     }}
-                    className={`option flex cursor-pointer items-center gap-4 border-transparent p-4 text-pretty hover:border-[3px] hover:border-(--color-purple600) has-checked:border-[3px] md:gap-8 md:rounded-3xl lg:p-6 ${answer === null && 'has-checked:border-(--color-purple600)'} ${answer === false ? 'has-checked:border-(--color-red500)' : 'has-checked:border-(--color-green500)'} lg:max-w-141`}
+                    className={`option flex ${isDark && 'bg-(--color-blue850)'} cursor-pointer items-center gap-4 border-transparent p-4 text-pretty hover:border-[3px] hover:border-(--color-purple600) has-checked:border-[3px] md:gap-8 md:rounded-3xl lg:p-6 ${answer === null && 'has-checked:border-(--color-purple600)'} ${answer === false ? 'has-checked:border-(--color-red500)' : 'has-checked:border-(--color-green500)'} lg:max-w-141`}
                     key={idx}
                   >
                     <input
@@ -153,7 +157,7 @@ const Quiz = ({
               })}
             </ul>
             <button
-              className={`submit w-full cursor-pointer p-4 md:rounded-3xl md:p-8 ${!isChecked && 'lg:opacity-50'}`}
+              className={`submit w-full cursor-pointer p-4 md:rounded-3xl md:p-8 ${!isChecked && 'lg:opacity-50'} ${!isChecked && isDark && 'lg:bg-(--purple-tint) lg:opacity-100'} `}
             >
               Submit Answer
             </button>
